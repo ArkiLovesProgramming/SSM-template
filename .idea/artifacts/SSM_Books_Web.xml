@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="SSM-Books:Web">
+    <output-path>$PROJECT_DIR$/out/artifacts/SSM_Books_Web</output-path>
+    <root id="archive" name="SSM-Books_Web.war">
+      <element id="artifact" artifact-name="SSM-Books:Web exploded" />
+    </root>
+  </artifact>
+</component>

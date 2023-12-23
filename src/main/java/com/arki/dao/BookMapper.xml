@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.arki.dao.BookMapper">
+
+    <resultMap id="bookResultMap" type="book">
+        <id property="bookId" column="book_id"/>
+        <result property="bookName" column="book_name"/>
+        <result property="bookCount" column="book_count"/>
+        <result property="bookSum" column="book_sum"/>
+    </resultMap>
+
+    <select id="getBooks" resultMap="bookResultMap">
+        select * from books;
+    </select>
+
+    <insert id="addBook" parameterType="book">
+        insert into books(`book_name`, `book_count`,`book_sum`) values (#{bookName}, #{bookCount}, #{bookSum});
+    </insert>
+
+</mapper>
